@@ -1,5 +1,5 @@
 SRC =./src
-Target =./target
+TARGET =./target
 CC =g++-9
 CFLAGS =-std=c++2a -Wall -Werror
 RM =rm -rf
