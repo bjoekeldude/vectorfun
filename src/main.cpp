@@ -75,14 +75,10 @@ void mainLoop(std::vector<int>& internal_container){
             case 5:     shuffle(internal_container);                    break;
             case 6:     delete_last(internal_container);                break;
             case 7:     multiply(internal_container);                   break;
-            case 0:     return;}
-        }
+            case 0:     return;};
+        };
 
-    }
 }
-
-
-
 
 
 int main (){
