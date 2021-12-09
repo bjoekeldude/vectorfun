@@ -4,6 +4,7 @@
 #include<algorithm>
 #include<random>
 
+
 namespace vectorfunctions{
     void add_value(std::vector<int>& container){
         int input{};
@@ -63,19 +64,20 @@ void print_dialog(){
 
 void mainLoop(std::vector<int>& internal_container){
     for(;;){                                        /////an dieser Stelle auch while(1) oder while(true)
+        namespace vf = vectorfunctions;
         int option;
         std::cout << "Willkommen zum Vector-Demonstrator" << std::endl;
         print_dialog();
         std::cin >> option;
         switch(option){
             default:    std::cout << "unknown command" << std::endl;    break;
-            case 1:     vectorfunctions::add_value(internal_container);                  break;
-            case 2:     vectorfunctions::print_first(internal_container);                break;
-            case 3:     vectorfunctions::print_last(internal_container);                 break;
-            case 4:     vectorfunctions::print_all(internal_container);                  break;
-            case 5:     vectorfunctions::shuffle(internal_container);                    break;
-            case 6:     vectorfunctions::delete_last(internal_container);                break;
-            case 7:     vectorfunctions::multiply(internal_container);                   break;
+            case 1:     vf::add_value(internal_container);                  break;
+            case 2:     vf::print_first(internal_container);                break;
+            case 3:     vf::print_last(internal_container);                 break;
+            case 4:     vf::print_all(internal_container);                  break;
+            case 5:     vf::shuffle(internal_container);                    break;
+            case 6:     vf::delete_last(internal_container);                break;
+            case 7:     vf::multiply(internal_container);                   break;
             case 0:     return;};
         };
 
